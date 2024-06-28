@@ -1,0 +1,86 @@
+.reviews {
+  position: relative;
+  z-index: 5;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 26px;
+
+    &__item {
+      max-width: 354px;
+      padding: 50px 42px;
+      border: 1px solid #e8e8e8;
+      border-radius: 16px 16px 16px 0;
+      background-color: var(--light-color);
+
+      &:first-child .reviews-list__item-rating {
+        background-image: url('../img/reviews-icon-1.png');
+      }
+      &:nth-child(2) .reviews-list__item-rating {
+        background-image: url('../img/reviews-icon-2.png');
+      }
+      &:nth-child(3) .reviews-list__item-rating {
+        background-image: url('../img/reviews-icon-3.png');
+      }
+
+      &:first-child .reviews-list__item-box {
+        background-image: url('../img/avatar-1.png');
+      }
+      &:nth-child(2) .reviews-list__item-box {
+        background-image: url('../img/avatar-2.png');
+      }
+      &:nth-child(3) .reviews-list__item-box {
+        background-image: url('../img/avatar-3.png');
+      }
+      &-rating {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: right center;
+      }
+      &-stars {
+        height: 16px;
+        width: 80px;
+        background-repeat: repeat;
+        background-position: left center;
+        background-size: 16px;
+        background-image: url('../img/reviews-star.png');
+      }
+      &-text {
+        margin: 0;
+        margin-top: 40px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 187%;
+        color: var(--dark);
+      }
+      &-box {
+        margin-top: 30px;
+        display: grid;
+        padding-left: 56px;
+
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 40px;
+      }
+      &-name {
+        margin: 0;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--dark);
+      }
+      &-profession {
+        margin: 0;
+        margin-top: 4px;
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 14px;
+        color: var(--gray);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.certification {
+  position: relative;
+  z-index: 5;
+  &-container {
+    display: flex;
+    align-items: center;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &-title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--grey);
+  }
+  &-line {
+    margin-left: 16px;
+    width: 147px;
+    border-top: 1px solid var(--accent);
+  }
+  &-list {
+    margin-left: 87px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    @include small-tablet {
+      margin-top: 30px;
+      margin-left: 0;
+      gap: 70px;
+    }
+    @include mobile {
+      gap: 50px;
+    }
+  }
+}

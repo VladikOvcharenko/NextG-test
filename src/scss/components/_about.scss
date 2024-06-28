@@ -1,0 +1,70 @@
+.about {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -200px;
+    left: -270px;
+    height: 1400px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    background-size: 1000px 1400px;
+    background-image: url('../img/about-left.svg');
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -750px;
+    right: -140px;
+    height: 1400px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    background-size: 1000px 1400px;
+    background-image: url('../img/about-right.svg');
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @include small-tablet {
+      gap: 60px;
+    }
+    @include mobile {
+      gap: 30px;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    gap: 47px;
+    align-items: center;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      &:last-child {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @include small-tablet {
+      gap: 30px;
+    }
+  }
+  &-box {
+    &__title {
+    }
+    &__text {
+      margin-top: 26px;
+      font-size: 16px;
+      line-height: 187%;
+    }
+  }
+  &-img {
+    border-radius: 16px 16px 16px 0;
+  }
+}

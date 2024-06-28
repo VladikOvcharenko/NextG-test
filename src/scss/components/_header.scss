@@ -1,0 +1,95 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  z-index: 11;
+  &.sticky {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    );
+    backdrop-filter: blur(10px);
+  }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    width: 161px;
+    height: 40px;
+    background-color: #c4c4c4;
+  }
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    @include small-tablet {
+      gap: 20px;
+    }
+
+    @include mobile {
+      gap: 20px;
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+
+      &.menu--active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 60px;
+        opacity: 1;
+        visibility: visible;
+        background: var(--light-color);
+      }
+    }
+  }
+  &-nav {
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+
+      @include small-tablet {
+        gap: 20px;
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__link {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 187%;
+      text-align: center;
+      color: var(--grey);
+    }
+  }
+  &-contact {
+  }
+}
+
+.burger {
+  z-index: 15;
+  @include burger;
+  color: var(--blue);
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}

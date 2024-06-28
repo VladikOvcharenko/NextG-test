@@ -1,0 +1,73 @@
+.reasons {
+  position: relative;
+  z-index: 5;
+  &-container {
+    display: flex;
+    gap: 87px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 46px;
+      &:first-child {
+        align-items: center;
+      }
+    }
+  }
+
+  &-text {
+    margin-top: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+  }
+  &-list {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    &__item {
+      max-width: 312px;
+      padding-left: 73px;
+
+      background-repeat: no-repeat;
+      background-size: 56px;
+      background-position: top left;
+
+      &:first-child {
+        background-image: url('../img/industry-icon.svg');
+      }
+      &:nth-child(2) {
+        background-image: url('../img/innovation-icon.svg');
+      }
+      &:nth-child(3) {
+        background-image: url('../img/create-icon.svg');
+      }
+      &:nth-child(4) {
+        background-image: url('../img/protect-icon.svg');
+      }
+
+      &-title {
+        margin: 0;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        color: var(--dark);
+      }
+      &-text {
+        margin: 0;
+        margin-top: 10px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 147%;
+        color: var(--grey);
+      }
+    }
+  }
+}
